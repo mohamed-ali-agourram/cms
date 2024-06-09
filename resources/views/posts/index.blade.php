@@ -17,6 +17,9 @@
             <div class="bg-white shadow-md rounded-lg p-6 mb-4">
                 <a href="{{ route('posts.show', $post) }}" class="block hover:bg-gray-100 p-4 rounded-md transition">
                     <h1 class="text-2xl font-bold mb-2">{{ $post->title }}</h1>
+                    @if ($post->image)
+                        <img src="{{ Storage::url($post->image) }}" alt="{{ $post->title }}" class="mb-4 rounded" height="200" width="200">
+                    @endif
                     <p class="text-gray-700 mb-2">{{ Str::limit($post->content, 20) }}</p>
                     <p class="text-gray-600">Author: {{ $post->user->name }}</p>
                 </a>
