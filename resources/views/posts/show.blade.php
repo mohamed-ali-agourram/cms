@@ -6,7 +6,7 @@
             @endif
             <h1 class="text-2xl font-bold mb-4">{{ $post->title }}</h1>
             <p class="mb-4">{{ $post->content }}</p>
-            <p class="text-gray-600">Author: {{ $post->user->name }}</p>
+            <p class="text-gray-600">Author: <b>{{ $post->user == auth()->user() ? "You" : $post->user->name }}</b></p>
         </div>
         @if ($post->user->id == auth()->user()->id)
             <div class="mt-6 flex gap-4 items-center space-x-4">

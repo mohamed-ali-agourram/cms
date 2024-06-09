@@ -21,7 +21,7 @@
                         <img src="{{ Storage::url($post->image) }}" alt="{{ $post->title }}" class="mb-4 rounded" height="200" width="200">
                     @endif
                     <p class="text-gray-700 mb-2">{{ Str::limit($post->content, 20) }}</p>
-                    <p class="text-gray-600">Author: {{ $post->user->name }}</p>
+                    <p class="text-gray-600">Author: <b>{{ $post->user == auth()->user() ? "You" : $post->user->name }}</b></p>
                 </a>
             </div>
         @endforeach
