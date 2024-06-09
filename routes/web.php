@@ -4,7 +4,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::resource("posts", PostController::class)->middleware(("auth"));
+Route::resource("posts", PostController::class)->middleware("auth");
 
 Route::get('/dashboard', function () {
     return view('dashboard');
