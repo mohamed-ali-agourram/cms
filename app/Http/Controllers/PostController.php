@@ -36,7 +36,7 @@ class PostController extends Controller
         ]);
         $validatedData["user_id"] = auth()->id();
         Post::create($validatedData);
-        return redirect()->route("posts.index");
+        return redirect()->route("posts.index")->with('success', 'Post created successfully!');
     }
 
     /**
@@ -74,7 +74,7 @@ class PostController extends Controller
         ]);
         $validatedData["user_id"] = $post->user->id;
         $post->update($validatedData);
-        return redirect()->route("posts.index");
+        return redirect()->route("posts.index")->with('success', 'Post updated successfully!');
     }
 
     /**
@@ -83,6 +83,6 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         $post->delete();
-        return redirect()->route("posts.index");
+        return redirect()->route("posts.index")->with('success', 'Post deleted successfully!');
     }
 }
