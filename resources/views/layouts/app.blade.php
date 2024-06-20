@@ -33,12 +33,12 @@
         <main class="p-2">
             <!-- Flash Messages -->
             @if (session('success'))
-                <div class="bg-green-500 border text-green-500 p-4 rounded mb-4">
+                <div class="bg-green-500 border text-white p-4 rounded mb-4">
                     {{ session('success') }}
                 </div>
             @endif
             @if (session('error'))
-                <div class="bg-red-500 border text-red-500 p-4 rounded mb-4">
+                <div class="bg-red-500 border text-white p-4 rounded mb-4">
                     {{ session('error') }}
                 </div>
             @endif

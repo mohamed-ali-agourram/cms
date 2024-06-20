@@ -1,14 +1,14 @@
 <x-app-layout>
     <div class="container mx-auto p-6">
         <div class="mb-4">
-            <a href="{{ route('posts.create') }}" class="bg-green-500 hover:bg-green-700 border font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+            <a href="{{ route('posts.create') }}" class="bg-green-500 hover:bg-green-700 border text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                 Add new post
             </a>
         </div>
         <form action="{{ route('posts.index') }}" method="GET" class="mb-6">
             <div class="flex gap-2">
                 <input type="search" name="search" placeholder="Search by title or content" value="{{ $search }}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                <button type="submit" class="ml-2 bg-blue-500 hover:bg-blue-700 border font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                <button type="submit" class="ml-2 bg-blue-500 text-white hover:bg-blue-700 border font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                     Search
                 </button>
             </div>

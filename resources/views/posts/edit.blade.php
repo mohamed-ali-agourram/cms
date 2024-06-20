@@ -27,7 +27,7 @@
                     <img src="{{ Storage::url($post->image) }}" alt="Post Image" class="mt-4 h-10 w-10">
                 @endif
             </div>
-            <button type="submit" class="bg-blue-500 hover:bg-blue-700 border font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 border text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                 Submit
             </button>
         </form>
