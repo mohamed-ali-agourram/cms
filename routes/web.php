@@ -4,6 +4,10 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+Route::get("/", function(){
+    return redirect("/posts");
+});
+
 Route::resource("posts", PostController::class)->middleware("auth");
 
 Route::get('/dashboard', function () {
